@@ -132,7 +132,7 @@ void init(void)
 	_pio_set_output(LED3_PIO, LED3_PIO_IDX_MASK, 0, 0, 0);
 	
 	pmc_enable_periph_clk(BUT1_PIO_ID);
-	pio_set_input(BUT1_PIO, BUT1_PIO_IDX_MASK, PIO_DEFAULT);
+	_pio_set_input(BUT1_PIO, BUT1_PIO_IDX_MASK, PIO_DEFAULT);
 	_pio_pull_up(BUT1_PIO, BUT1_PIO_IDX_MASK, 1);
 	
 	pmc_enable_periph_clk(BUT2_PIO_ID);
